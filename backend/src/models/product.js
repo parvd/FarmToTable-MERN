@@ -49,3 +49,14 @@ const productSchema =  new mongoose.Schema({
 },{timestamps:true});
 
 module.exports = mongoose.model('Product',productSchema);
+
+/*
+
+Types: of Products
+
+1)vegetables
+2)Fruits
+3)Frozen Exotic Fruits/vegetable
+4)Milk Products - panner,cheese
+5)Dry Fruit
+*/

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
-import { useSelector,useDispatch } from 'react-redux';
-import {signout} from '../../actions/auth-actions'
+import { useSelector, useDispatch } from 'react-redux';
+import { signout } from '../../actions/auth-actions';
 const Header = (props) => {
 	const auth = useSelector((state) => state.auth);
 	const dispatch = useDispatch();
-	const Signout = () =>{
+	const Signout = () => {
 		dispatch(signout());
-	}
+	};
 	const renderNonLoggedInLinks = () => {
 		return (
 			<Nav>
@@ -30,7 +30,9 @@ const Header = (props) => {
 		return (
 			<Nav>
 				<li className="nav-item">
-					<span className="nav-link" onClick={Signout}>Signout</span>
+					<span className="nav-link" onClick={Signout}>
+						Signout
+					</span>
 				</li>
 			</Nav>
 		);
@@ -38,7 +40,7 @@ const Header = (props) => {
 
 	return (
 		<div>
-			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{ zIndex: 1 }}>
+			<Navbar collapseOnSelect fixed="top" expand="lg" bg="dark" variant="dark" style={{ zIndex: 1 }}>
 				<Container fluid>
 					<Link to="/#" className="navbar-brand">
 						Admin Dashboard

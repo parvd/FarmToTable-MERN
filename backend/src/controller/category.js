@@ -14,6 +14,7 @@ function getList(categories, parentId = null) {
       _id: c._id,
       name: c.name,
       slug: c.slug,
+      parentId: c.parentId,
       children: getList(categories,c._id),
     });
   }
@@ -46,6 +47,7 @@ exports.addCategory = (req, res) => {
 
 exports.getCategories = (req, res) => {
   Category.find({}).exec((error, categories) => {
+    //console.log(categories);
     if (error) return res.status(400).json({ error });
     if (categories) {
       const categoryList = getList(categories);

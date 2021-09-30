@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Form, Container, Button, Row, Col } from 'react-bootstrap';
 import Layout from '../../component/Layout';
-import Input from '../../component/UI/input/input';
+import Input from '../../component/UI/Input/input';
 import { login } from '../../actions';
 import { isUserLoggedIn } from '../../actions';
 import { Redirect } from 'react-router-dom';
@@ -30,7 +30,7 @@ const Signin = (props) => {
 		<div>
 			<Layout>
 				<Container>
-					<Row style={{ marginTop: '50px' }}>
+					<Row style={{ marginTop: '150px',}}>
 						<Col md={{ span: 6, offset: 3 }}>
 							<Form onSubmit={userLogin}>
 								<Input

@@ -1,7 +1,7 @@
 import React ,{useState} from 'react';
 import { Form, Container, Button, Row, Col } from 'react-bootstrap';
 import Layout from '../../component/Layout/index';
-import Input from '../../component/UI/input/input';
+import Input from '../../component/UI/Input/input';
 import { signup } from '../../actions';
 import { Redirect, BrowserRouter as Router } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -37,7 +37,7 @@ const Signup = (props) => {
 			<Layout>
 				<Container>
           {user.message}
-					<Row style={{ marginTop: '50px' }}>
+					<Row style={{ marginTop: '150px' , }}>
 						<Col md={{ span: 6, offset: 3 }}>
 							<Form onSubmit={userSignup}>
 								<Input
